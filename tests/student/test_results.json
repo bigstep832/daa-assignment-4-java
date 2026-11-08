@@ -1,0 +1,1021 @@
+{
+  "seed": 4102026,
+  "java_heap": "384m",
+  "active_processor_count": 1,
+  "timeout_seconds_per_batch": 20,
+  "total_requests": 5713,
+  "requests_by_task": {
+    "aho": 196,
+    "kmp": 1158,
+    "lcs": 1073,
+    "merge": 436,
+    "naive": 1158,
+    "rk": 1158,
+    "suffix": 321,
+    "tree": 213
+  },
+  "all_passed": true,
+  "source_sha256": {
+    "Java/source/Algorithms.java": "b903345b0408e7890703ad34ca3a5862118464faa53058eb0109e4ee53fdef7c",
+    "Java/source/Json.java": "62ea8bf9ad602844e51b87d8b06fb6964dab514ba1cf07b9557bf220f40baf2b",
+    "Java/source/Main.java": "17c419419c4501cb112af97e9b341b444c64dd0df9a684231664757fc3d893fb"
+  },
+  "batches": [
+    {
+      "name": "mixed oracle batch 1",
+      "requests": 1200,
+      "seconds": 0.139498,
+      "output_bytes": 37618,
+      "passed": true,
+      "case_names": null
+    },
+    {
+      "name": "mixed oracle batch 2",
+      "requests": 1200,
+      "seconds": 0.188685,
+      "output_bytes": 35695,
+      "passed": true,
+      "case_names": null
+    },
+    {
+      "name": "mixed oracle batch 3",
+      "requests": 1200,
+      "seconds": 0.160679,
+      "output_bytes": 35070,
+      "passed": true,
+      "case_names": null
+    },
+    {
+      "name": "mixed oracle batch 4",
+      "requests": 1200,
+      "seconds": 0.167858,
+      "output_bytes": 36689,
+      "passed": true,
+      "case_names": null
+    },
+    {
+      "name": "mixed oracle batch 5",
+      "requests": 883,
+      "seconds": 0.160201,
+      "output_bytes": 28366,
+      "passed": true,
+      "case_names": null
+    },
+    {
+      "name": "lcs full domain",
+      "requests": 4,
+      "seconds": 0.17269,
+      "output_bytes": 2112,
+      "passed": true,
+      "case_names": [
+        "identical 1000x1000",
+        "alternating 1000x1000",
+        "disjoint 1000x1000",
+        "empty versus maximum"
+      ]
+    },
+    {
+      "name": "merge full domain",
+      "requests": 3,
+      "seconds": 0.142426,
+      "output_bytes": 7669,
+      "passed": true,
+      "case_names": [
+        "balanced equal leaves 64-bit",
+        "200 zero blocks ties",
+        "one edge nonzero block"
+      ]
+    },
+    {
+      "name": "tree full domain",
+      "requests": 3,
+      "seconds": 0.477805,
+      "output_bytes": 883438,
+      "passed": true,
+      "case_names": [
+        "deep chain 64-bit",
+        "wide star 64-bit",
+        "negative deep chain"
+      ]
+    },
+    {
+      "name": "naive full domain",
+      "requests": 4,
+      "seconds": 0.158029,
+      "output_bytes": 20356,
+      "passed": true,
+      "case_names": [
+        "naive n=3000, m=1500",
+        "naive n=3000, m=0",
+        "naive n=2999, m=3000",
+        "naive n=3000, m=1500"
+      ]
+    },
+    {
+      "name": "kmp full domain",
+      "requests": 4,
+      "seconds": 0.21989,
+      "output_bytes": 1877860,
+      "passed": true,
+      "case_names": [
+        "kmp n=200000, m=100000",
+        "kmp n=200000, m=0",
+        "kmp n=200000, m=100000",
+        "kmp n=0, m=100000"
+      ]
+    },
+    {
+      "name": "rk full domain",
+      "requests": 4,
+      "seconds": 0.197977,
+      "output_bytes": 87857,
+      "passed": true,
+      "case_names": [
+        "rk n=10000, m=2000",
+        "rk n=10000, m=0",
+        "rk n=2000, m=10000",
+        "rk n=10000, m=2000"
+      ]
+    },
+    {
+      "name": "suffix full domain",
+      "requests": 2,
+      "seconds": 0.251801,
+      "output_bytes": 1255615,
+      "passed": true,
+      "case_names": [
+        "50000 equal characters",
+        "50000 alternating characters"
+      ]
+    },
+    {
+      "name": "aho maximum trie depth",
+      "requests": 2,
+      "seconds": 0.264047,
+      "output_bytes": 435,
+      "passed": true,
+      "case_names": [
+        "100000-state chain and 200000 text",
+        "100 independent texts and full trie"
+      ]
+    },
+    {
+      "name": "aho dense duplicates",
+      "requests": 3,
+      "seconds": 0.385607,
+      "output_bytes": 5070541,
+      "passed": true,
+      "case_names": [
+        "10000 duplicates with dense overlaps",
+        "maximum count matrix",
+        "100 empty rows"
+      ]
+    },
+    {
+      "name": "aho wide dictionary",
+      "requests": 1,
+      "seconds": 0.200967,
+      "output_bytes": 20019,
+      "passed": true,
+      "case_names": [
+        "10000 distinct patterns total length 100000"
+      ]
+    }
+  ],
+  "representative_expected_actual": [
+    {
+      "input": {
+        "task": "merge",
+        "sizes": [
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": 14,
+      "actual": {
+        "cost": 14,
+        "plan": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "rk",
+        "text": "abdj",
+        "pattern": "ab"
+      },
+      "expected": [
+        0
+      ],
+      "actual": {
+        "positions": [
+          0
+        ]
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "merge",
+        "sizes": [
+          0
+        ]
+      },
+      "expected": 0,
+      "actual": {
+        "cost": 0,
+        "plan": []
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "tree",
+        "n": 3,
+        "weights": [
+          4,
+          9,
+          6
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "expected": 10,
+      "actual": {
+        "selected": [
+          0,
+          2
+        ],
+        "weight": 10
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "merge",
+        "sizes": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "expected": 0,
+      "actual": {
+        "cost": 0,
+        "plan": [
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            1,
+            1,
+            3
+          ],
+          [
+            0,
+            0,
+            3
+          ]
+        ]
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "kmp",
+        "text": "a",
+        "pattern": ""
+      },
+      "expected": [
+        0,
+        1
+      ],
+      "actual": {
+        "positions": [
+          0,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "naive",
+        "text": "abdj",
+        "pattern": "ab"
+      },
+      "expected": [
+        0
+      ],
+      "actual": {
+        "positions": [
+          0
+        ]
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "lcs",
+        "a": "tea_time",
+        "b": "team"
+      },
+      "expected": 4,
+      "actual": {
+        "sequence": "team",
+        "length": 4
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "naive",
+        "text": "a",
+        "pattern": ""
+      },
+      "expected": [
+        0,
+        1
+      ],
+      "actual": {
+        "positions": [
+          0,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "tree",
+        "n": 1,
+        "weights": [
+          -1
+        ],
+        "edges": []
+      },
+      "expected": 0,
+      "actual": {
+        "weight": 0,
+        "selected": []
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "suffix",
+        "text": "abXabYcdZcd"
+      },
+      "expected": {
+        "sa": [
+          2,
+          5,
+          8,
+          0,
+          3,
+          1,
+          4,
+          9,
+          6,
+          10,
+          7
+        ],
+        "lcp": [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          1,
+          0,
+          2,
+          0,
+          1
+        ]
+      },
+      "actual": {
+        "sa": [
+          2,
+          5,
+          8,
+          0,
+          3,
+          1,
+          4,
+          9,
+          6,
+          10,
+          7
+        ],
+        "lcp": [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          1,
+          0,
+          2,
+          0,
+          1
+        ],
+        "repeated": "ab"
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "rk",
+        "text": "aaaaa",
+        "pattern": "aaa"
+      },
+      "expected": [
+        0,
+        1,
+        2
+      ],
+      "actual": {
+        "positions": [
+          0,
+          1,
+          2
+        ]
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "merge",
+        "sizes": [
+          1,
+          100,
+          1
+        ]
+      },
+      "expected": 203,
+      "actual": {
+        "plan": [
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "cost": 203
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "aho",
+        "patterns": [
+          "a",
+          "aa",
+          "a"
+        ],
+        "texts": [
+          "aaa",
+          "",
+          "aaa"
+        ]
+      },
+      "expected": [
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          2,
+          3
+        ]
+      ],
+      "actual": {
+        "counts": [
+          [
+            3,
+            2,
+            3
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            2,
+            3
+          ]
+        ]
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "rk",
+        "text": "a",
+        "pattern": ""
+      },
+      "expected": [
+        0,
+        1
+      ],
+      "actual": {
+        "positions": [
+          0,
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "tree",
+        "n": 0,
+        "weights": [],
+        "edges": []
+      },
+      "expected": 0,
+      "actual": {
+        "weight": 0,
+        "selected": []
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "merge",
+        "sizes": []
+      },
+      "expected": 0,
+      "actual": {
+        "plan": [],
+        "cost": 0
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "tree",
+        "n": 1,
+        "weights": [
+          0
+        ],
+        "edges": []
+      },
+      "expected": 0,
+      "actual": {
+        "weight": 0,
+        "selected": []
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "suffix",
+        "text": "$"
+      },
+      "expected": {
+        "sa": [
+          0
+        ],
+        "lcp": [
+          0
+        ]
+      },
+      "actual": {
+        "repeated": "",
+        "lcp": [
+          0
+        ],
+        "sa": [
+          0
+        ]
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "suffix",
+        "text": "banana"
+      },
+      "expected": {
+        "sa": [
+          5,
+          3,
+          1,
+          0,
+          4,
+          2
+        ],
+        "lcp": [
+          0,
+          1,
+          3,
+          0,
+          0,
+          2
+        ]
+      },
+      "actual": {
+        "repeated": "ana",
+        "lcp": [
+          0,
+          1,
+          3,
+          0,
+          0,
+          2
+        ],
+        "sa": [
+          5,
+          3,
+          1,
+          0,
+          4,
+          2
+        ]
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "kmp",
+        "text": "abdj",
+        "pattern": "ab"
+      },
+      "expected": [
+        0
+      ],
+      "actual": {
+        "positions": [
+          0
+        ]
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "lcs",
+        "a": "a a~\"\\",
+        "b": " a\"\\"
+      },
+      "expected": 4,
+      "actual": {
+        "sequence": " a\"\\",
+        "length": 4
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "lcs",
+        "a": "zzzzzz",
+        "b": "zz"
+      },
+      "expected": 2,
+      "actual": {
+        "sequence": "zz",
+        "length": 2
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "tree",
+        "n": 3,
+        "weights": [
+          -9,
+          -2,
+          -1
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "expected": 0,
+      "actual": {
+        "selected": [],
+        "weight": 0
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "lcs",
+        "a": "",
+        "b": "~!"
+      },
+      "expected": 0,
+      "actual": {
+        "sequence": "",
+        "length": 0
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "naive",
+        "text": "aaaaa",
+        "pattern": "aaa"
+      },
+      "expected": [
+        0,
+        1,
+        2
+      ],
+      "actual": {
+        "positions": [
+          0,
+          1,
+          2
+        ]
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "tree",
+        "n": 3,
+        "weights": [
+          0,
+          0,
+          0
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "expected": 0,
+      "actual": {
+        "weight": 0,
+        "selected": []
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "naive",
+        "text": "zab",
+        "pattern": "ab"
+      },
+      "expected": [
+        1
+      ],
+      "actual": {
+        "positions": [
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "kmp",
+        "text": "zab",
+        "pattern": "ab"
+      },
+      "expected": [
+        1
+      ],
+      "actual": {
+        "positions": [
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "tree",
+        "n": 1,
+        "weights": [
+          7
+        ],
+        "edges": []
+      },
+      "expected": 7,
+      "actual": {
+        "weight": 7,
+        "selected": [
+          0
+        ]
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "merge",
+        "sizes": [
+          1000000000,
+          1000000000,
+          1000000000,
+          1000000000
+        ]
+      },
+      "expected": 8000000000,
+      "actual": {
+        "cost": 8000000000,
+        "plan": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ]
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "lcs",
+        "a": "ABCBDAB",
+        "b": "BDCABA"
+      },
+      "expected": 4,
+      "actual": {
+        "sequence": "BCBA",
+        "length": 4
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "rk",
+        "text": "zab",
+        "pattern": "ab"
+      },
+      "expected": [
+        1
+      ],
+      "actual": {
+        "positions": [
+          1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "kmp",
+        "text": "aaaaa",
+        "pattern": "aaa"
+      },
+      "expected": [
+        0,
+        1,
+        2
+      ],
+      "actual": {
+        "positions": [
+          0,
+          1,
+          2
+        ]
+      },
+      "passed": true
+    },
+    {
+      "input": {
+        "task": "suffix",
+        "text": "abcxabcydefydef"
+      },
+      "expected": {
+        "sa": [
+          0,
+          4,
+          1,
+          5,
+          2,
+          6,
+          12,
+          8,
+          13,
+          9,
+          14,
+          10,
+          3,
+          11,
+          7
+        ],
+        "lcp": [
+          0,
+          3,
+          0,
+          2,
+          0,
+          1,
+          0,
+          3,
+          0,
+          2,
+          0,
+          1,
+          0,
+          0,
+          4
+        ]
+      },
+      "actual": {
+        "repeated": "ydef",
+        "lcp": [
+          0,
+          3,
+          0,
+          2,
+          0,
+          1,
+          0,
+          3,
+          0,
+          2,
+          0,
+          1,
+          0,
+          0,
+          4
+        ],
+        "sa": [
+          0,
+          4,
+          1,
+          5,
+          2,
+          6,
+          12,
+          8,
+          13,
+          9,
+          14,
+          10,
+          3,
+          11,
+          7
+        ]
+      },
+      "passed": true
+    }
+  ],
+  "limitation": "Local checks, not the official hidden tests or a promised grade."
+}

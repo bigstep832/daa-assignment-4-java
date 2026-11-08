@@ -1,0 +1,341 @@
+{
+  "java_version": "17.0.20.1",
+  "java_vm": "OpenJDK 64-Bit Server VM",
+  "java_vendor": "Microsoft",
+  "os": "Windows 11 10.0",
+  "architecture": "amd64",
+  "available_processors": 12,
+  "seed_base": 20261108,
+  "warmup_calls_per_method_case": 300,
+  "measured_runs": 5,
+  "calls_per_measured_run": 200,
+  "timing_scope": "Search method including output allocation, dispatch and volatile result assignment; excludes generation, correctness oracle, JSON, process startup and compilation.",
+  "jit_policy": "One JVM with normal tiered JIT. All cases/methods warm up before measurement. Method order rotates per run. No claim that JIT or GC is fully stabilized.",
+  "collision_test": {
+    "pattern": "ab",
+    "text": "abdj",
+    "all_methods_passed": true,
+    "expected_positions": [
+      0
+    ]
+  },
+  "rows": [
+    {
+      "case": "random",
+      "n": 500,
+      "m": 50,
+      "seed": 20261608,
+      "matches": 1,
+      "correct_outputs_checked": true,
+      "algorithm": "naive",
+      "microseconds_per_call": [
+        0.8935,
+        0.646,
+        0.7085,
+        0.9485,
+        1.231
+      ],
+      "median_microseconds_per_call": 0.8935
+    },
+    {
+      "case": "random",
+      "n": 500,
+      "m": 50,
+      "seed": 20261608,
+      "matches": 1,
+      "correct_outputs_checked": true,
+      "algorithm": "kmp",
+      "microseconds_per_call": [
+        0.924,
+        0.879,
+        1.0195,
+        0.902,
+        1.4745
+      ],
+      "median_microseconds_per_call": 0.924
+    },
+    {
+      "case": "random",
+      "n": 500,
+      "m": 50,
+      "seed": 20261608,
+      "matches": 1,
+      "correct_outputs_checked": true,
+      "algorithm": "rk",
+      "microseconds_per_call": [
+        3.482,
+        3.3305,
+        3.5955,
+        7.583,
+        3.7395
+      ],
+      "median_microseconds_per_call": 3.5955
+    },
+    {
+      "case": "random",
+      "n": 1500,
+      "m": 150,
+      "seed": 20262608,
+      "matches": 1,
+      "correct_outputs_checked": true,
+      "algorithm": "naive",
+      "microseconds_per_call": [
+        1.9375,
+        2.167,
+        1.963,
+        2.4355,
+        2.2705
+      ],
+      "median_microseconds_per_call": 2.167
+    },
+    {
+      "case": "random",
+      "n": 1500,
+      "m": 150,
+      "seed": 20262608,
+      "matches": 1,
+      "correct_outputs_checked": true,
+      "algorithm": "kmp",
+      "microseconds_per_call": [
+        2.791,
+        2.6835,
+        3.19,
+        3.584,
+        3.4345
+      ],
+      "median_microseconds_per_call": 3.19
+    },
+    {
+      "case": "random",
+      "n": 1500,
+      "m": 150,
+      "seed": 20262608,
+      "matches": 1,
+      "correct_outputs_checked": true,
+      "algorithm": "rk",
+      "microseconds_per_call": [
+        10.2925,
+        10.4405,
+        10.3995,
+        11.1425,
+        11.3365
+      ],
+      "median_microseconds_per_call": 10.4405
+    },
+    {
+      "case": "random",
+      "n": 3000,
+      "m": 300,
+      "seed": 20264108,
+      "matches": 1,
+      "correct_outputs_checked": true,
+      "algorithm": "naive",
+      "microseconds_per_call": [
+        4.504,
+        6.2665,
+        4.093,
+        3.923,
+        5.0565
+      ],
+      "median_microseconds_per_call": 4.504
+    },
+    {
+      "case": "random",
+      "n": 3000,
+      "m": 300,
+      "seed": 20264108,
+      "matches": 1,
+      "correct_outputs_checked": true,
+      "algorithm": "kmp",
+      "microseconds_per_call": [
+        5.4755,
+        6.687,
+        5.616,
+        7.0405,
+        5.4225
+      ],
+      "median_microseconds_per_call": 5.616
+    },
+    {
+      "case": "random",
+      "n": 3000,
+      "m": 300,
+      "seed": 20264108,
+      "matches": 1,
+      "correct_outputs_checked": true,
+      "algorithm": "rk",
+      "microseconds_per_call": [
+        20.424,
+        22.0695,
+        22.0715,
+        20.7425,
+        21.1375
+      ],
+      "median_microseconds_per_call": 21.1375
+    },
+    {
+      "case": "repetitive",
+      "n": 500,
+      "m": 50,
+      "seed": null,
+      "matches": 451,
+      "correct_outputs_checked": true,
+      "algorithm": "naive",
+      "microseconds_per_call": [
+        27.8125,
+        29.7445,
+        32.9065,
+        26.6475,
+        28.02
+      ],
+      "median_microseconds_per_call": 28.02
+    },
+    {
+      "case": "repetitive",
+      "n": 500,
+      "m": 50,
+      "seed": null,
+      "matches": 451,
+      "correct_outputs_checked": true,
+      "algorithm": "kmp",
+      "microseconds_per_call": [
+        3.8175,
+        4.419,
+        3.961,
+        5.5455,
+        4.2355
+      ],
+      "median_microseconds_per_call": 4.2355
+    },
+    {
+      "case": "repetitive",
+      "n": 500,
+      "m": 50,
+      "seed": null,
+      "matches": 451,
+      "correct_outputs_checked": true,
+      "algorithm": "rk",
+      "microseconds_per_call": [
+        47.3475,
+        45.6135,
+        49.62,
+        48.755,
+        46.263
+      ],
+      "median_microseconds_per_call": 47.3475
+    },
+    {
+      "case": "repetitive",
+      "n": 1500,
+      "m": 150,
+      "seed": null,
+      "matches": 1351,
+      "correct_outputs_checked": true,
+      "algorithm": "naive",
+      "microseconds_per_call": [
+        231.4825,
+        247.1565,
+        222.043,
+        217.9555,
+        216.384
+      ],
+      "median_microseconds_per_call": 222.043
+    },
+    {
+      "case": "repetitive",
+      "n": 1500,
+      "m": 150,
+      "seed": null,
+      "matches": 1351,
+      "correct_outputs_checked": true,
+      "algorithm": "kmp",
+      "microseconds_per_call": [
+        11.985,
+        13.999,
+        7.0755,
+        7.96,
+        7.359
+      ],
+      "median_microseconds_per_call": 7.96
+    },
+    {
+      "case": "repetitive",
+      "n": 1500,
+      "m": 150,
+      "seed": null,
+      "matches": 1351,
+      "correct_outputs_checked": true,
+      "algorithm": "rk",
+      "microseconds_per_call": [
+        355.8755,
+        362.5615,
+        364.905,
+        351.093,
+        349.535
+      ],
+      "median_microseconds_per_call": 355.8755
+    },
+    {
+      "case": "repetitive",
+      "n": 3000,
+      "m": 300,
+      "seed": null,
+      "matches": 2701,
+      "correct_outputs_checked": true,
+      "algorithm": "naive",
+      "microseconds_per_call": [
+        1007.8155,
+        928.0635,
+        969.147,
+        960.514,
+        1276.269
+      ],
+      "median_microseconds_per_call": 969.147
+    },
+    {
+      "case": "repetitive",
+      "n": 3000,
+      "m": 300,
+      "seed": null,
+      "matches": 2701,
+      "correct_outputs_checked": true,
+      "algorithm": "kmp",
+      "microseconds_per_call": [
+        28.5855,
+        17.002,
+        19.1555,
+        14.287,
+        17.0015
+      ],
+      "median_microseconds_per_call": 17.002
+    },
+    {
+      "case": "repetitive",
+      "n": 3000,
+      "m": 300,
+      "seed": null,
+      "matches": 2701,
+      "correct_outputs_checked": true,
+      "algorithm": "rk",
+      "microseconds_per_call": [
+        1908.935,
+        1483.4455,
+        1745.929,
+        1574.869,
+        1597.5065
+      ],
+      "median_microseconds_per_call": 1597.5065
+    }
+  ],
+  "recorded_at_utc": "2026-11-08T18:23:16.766714+00:00",
+  "hardware": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 151 Stepping 2, GenuineIntel",
+    "cpu": "12th Gen Intel(R) Core(TM) i5-12450HX",
+    "logical_processors": 12,
+    "ram_bytes": 16873545728
+  },
+  "reproduce": "python tests/student/run_benchmark.py",
+  "java_options": "-Xmx384m (default tiered JIT)",
+  "algorithms_sha256": "b903345b0408e7890703ad34ca3a5862118464faa53058eb0109e4ee53fdef7c"
+}

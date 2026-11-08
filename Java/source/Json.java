@@ -1,5 +1,5 @@
 import java.util.*;
-/** Provided JSON transport; students implement Algorithms, not this parser. */
+
 final class Json {
  private final String s; private int i=0;
  Json(String s){this.s=s;}
